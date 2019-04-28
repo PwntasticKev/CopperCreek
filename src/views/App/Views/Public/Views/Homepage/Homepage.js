@@ -1,16 +1,34 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-export default class componentName extends Component {
-  static propTypes = {
-	prop: PropTypes
-  }
+export default class Homepage extends Component {
+
+state = {
+	menuOpen : false // This will be global later.
+}
 
   render() {
 	return (
 	  <div>
-		Homepage
+		<div>
+			<CompanyLogo>Logo</CompanyLogo>
+			<Burger>
+				<div></div>
+				<div></div>
+				<div></div>
+			</Burger>
+		</div>
 	  </div>
 	)
   }
 }
+
+
+let Burger = styled.div `
+
+`
+
+let CompanyLogo = styled.div `
+
+`
+

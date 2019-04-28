@@ -1,0 +1,17 @@
+.flex {
+	display: flex;
+}
+
+.flex-jcc {
+	justify-content: center;
+}
+
+.flex-ai {
+	display: flex;
+	align-content: center;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
