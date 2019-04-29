@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-        	{routes}
+        	{ routes }
       </Router>
       </div>
     );

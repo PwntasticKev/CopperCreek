@@ -1,10 +1,9 @@
 import React from 'react';
 import {
-	Link,
 	Route,
 	Switch,
   } from 'react-router-dom';
-  import Homepage from '../views/App/Views/Public/Views/Homepage/Homepage';
+  import Homepage from '../screens/App/screens/Homepage/Homepage';
   const About = () => <h1>About</h1>;
   
   // We give each route either a target `component`, or we can send functions in `render` or `children` 
