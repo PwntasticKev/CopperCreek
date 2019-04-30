@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Title from './components/Title'
 import MessageList from './components/MessageList'
 import SendMessageForm from './components/SendForm'
+import styled from 'styled-components'
 
 
 		const DUMMY_DATA = [
@@ -15,6 +16,8 @@ import SendMessageForm from './components/SendForm'
 			}
 		  ]
 
+		  let Wrapper = styled.ReactFragment``
+
     class ChatApp extends Component {
 
 		state = {
@@ -22,11 +25,11 @@ import SendMessageForm from './components/SendForm'
 		}
         render() {
             return (
-				<React.fragment>
+				<Wrapper>
 					<Title />
 					<MessageList messages={this.state.messages}/>
 					<SendMessageForm />
-				</React.fragment>
+				</Wrapper>
             )
         }
     }

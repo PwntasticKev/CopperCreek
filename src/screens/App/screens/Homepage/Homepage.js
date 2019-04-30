@@ -11,15 +11,7 @@ state = {
   render() {
 	return (
 	  <div>
-		<div>
-			<CompanyLogo>Logo</CompanyLogo>
-			<Burger>
-				<div></div>
-				<div></div>
-				<div></div>
-			</Burger>
 			<ChatBubble/>
-		</div>
 	  </div>
 	)
   }
