@@ -1,10 +1,10 @@
 export  const COLORS = {
 	blue: {
-		primary: {},
-		secondary: {}
+		primary: "",
+		secondary: ""
 	},
 	yellow: {
-		primary: {}
+		primary: ""
 	}
 }
 

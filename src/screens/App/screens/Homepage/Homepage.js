@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import ChatBubble from './components/ChatBubble'
 
 export default class Homepage extends Component {
 
@@ -17,6 +18,7 @@ state = {
 				<div></div>
 				<div></div>
 			</Burger>
+			<ChatBubble/>
 		</div>
 	  </div>
 	)
