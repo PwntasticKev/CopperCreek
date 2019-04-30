@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import ChatBubble from './components/ChatBubble'
+import ChatBubble from './components/ChatBubble/ChatBubble'
 
 export default class Homepage extends Component {
 
