@@ -12,7 +12,7 @@ export default class Header extends Component {
 	return (
 	  <div>
 		<Wrapper>
-			<companyLogo></companyLogo>
+			<companyLogo>loogo</companyLogo>
 			<navMenu>
 				<div></div>
 				<div></div>

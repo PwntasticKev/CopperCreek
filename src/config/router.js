@@ -3,7 +3,7 @@ import {
 	Route,
 	Switch,
   } from 'react-router-dom';
-  import Homepage from '../screens/App/screens/Homepage/Homepage';
+  import PublicLayout from '../screens/App/screens/PublicLayout/PublicLayout'
   const About = () => <h1>About</h1>;
   
   // We give each route either a target `component`, or we can send functions in `render` or `children` 
@@ -11,7 +11,7 @@ import {
   
 	export default (
 		<Switch>
-			<Route exact path="/" component={Homepage} />
+			<Route exact path="/" component={PublicLayout} />
 			<Route path="/about" component={About} />
 			<Route path="/contact" render={() => <h1>Contact Us</h1>} />
 			<Route render={() => <h1>Page not found</h1>} />

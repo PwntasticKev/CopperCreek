@@ -16,7 +16,7 @@ import styled from 'styled-components'
 			}
 		  ]
 
-		  let Wrapper = styled.ReactFragment``
+		  let Wrapper = styled.section``
 
     class ChatApp extends Component {
 
