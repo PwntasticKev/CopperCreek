@@ -6,14 +6,19 @@ let Wrapper = styled.section`
 	display: flex; 
 	justify-content: space-between; 
 	padding: 10px 15px;
+	align-items: center;
 
 	img {
 		width: 95px;
     	max-height: 30px;
 	}
 `
-let CompanyLogo = styled.div`
+
+let Logo = styled.div`
+	font-weight: 700;
+	font-size: 20px;
 `
+
 let NavMenu = styled.div`
 	text-align: center;
  div { 
@@ -30,24 +35,38 @@ span {
 	color: gray;
 	text-align: center;
 }
+
+@media( min-width: 1025px) {
+	display: none;
+}
 `
-let NavbarWrapper = styled.section` display: none; @media(min-width: 1024px) { display: none } `
-let NavbarItem = styled.div``
+let NavbarWrapper = styled.section` 
+	display: none; 
+	@media(min-width: 1025px) { 
+		display: flex; 
+
+	} `
+let NavbarItem = styled.div`
+	margin: 0 10px;
+`
 
 export default class Header extends Component {
   render() {
 	return (
 	  <div>
 		<Wrapper>
-			<img src={companyLogo} alt="logoimg"/>
+			{/* <img src={companyLogo} alt="logoimg"/> */}
+			<Logo>CopperCreek</Logo>
 			<NavMenu>
 				<div></div>
 				<div></div>
 				<div></div>
 				<span>Menu</span>
 			</NavMenu>
-			<NavbarWrapper class='navwrap'>
-				<NavbarItem></NavbarItem>
+			<NavbarWrapper>
+				<NavbarItem>Pricing</NavbarItem>
+				<NavbarItem>Catelog</NavbarItem>
+				<NavbarItem>About</NavbarItem>
 			</NavbarWrapper>
 		</Wrapper>
 	  </div>

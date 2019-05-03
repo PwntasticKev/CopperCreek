@@ -11,6 +11,7 @@ state = {
   render() {
 	return (
 	  <div>
+	  	<h1>Create and Customize your designs</h1>
 			<ChatBubble/>
 	  </div>
 	)

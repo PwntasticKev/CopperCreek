@@ -5,7 +5,7 @@ export default class PublicLayouts extends Component {
   render() {
 	return (
 	  <div>
-	  <Header/>
+		<Header/>
 		{/* <App/> */}
 		{/* //renders router that handles homepage */}
 	  </div>
