@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import companyLogo from '../../shared/assets/copperCreekConcepts.gif'
+// import companyLogo from '../../shared/assets/copperCreekConcepts.gif'
 
 let Wrapper = styled.section` 
 	display: flex; 
@@ -17,23 +17,30 @@ let Wrapper = styled.section`
 let Logo = styled.div`
 	font-weight: 700;
 	font-size: 20px;
+	color: #0066CC;
 `
 
 let NavMenu = styled.div`
 	text-align: center;
+	align-items: center;
+    display: flex;
+    flex-direction: column;
  div { 
-	margin: 3px 0; 
+	margin: 2px 0; 
 	background: gray; 
 	height: 3px; 
-	width: 25px; 
+	width: 21px; 
 	display: flex; 
 	justify-content: space-between; 
 	flex-direction: column; 
 }
 span {
-	font-size: 9px;
+	font-size: 11px;
 	color: gray;
 	text-align: center;
+	@media(min-width: 1025px) {
+		display: none;
+	}
 }
 
 @media( min-width: 1025px) {
