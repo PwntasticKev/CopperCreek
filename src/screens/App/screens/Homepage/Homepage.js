@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import Button from '../shared/components/Button'
 
 let H1 = styled.h1`
 	text-align: center;
@@ -23,17 +24,21 @@ state = {
 	  	<H1>Create and Customize your products</H1>
 		<H1subtext>Easy print-on-demand service, offering you the best bang for your buck</H1subtext>
 		<div>image from splash here</div>
+		<section>
+			<Button>Button 1</Button>
+			<Button>Button 2</Button>
+		</section>
 	  </div>
 	)
   }
 }
 
 
-let Burger = styled.div `
+// let Burger = styled.div `
 
-`
+// `
 
-let CompanyLogo = styled.div `
+// let CompanyLogo = styled.div `
 
-`
+// `
 
