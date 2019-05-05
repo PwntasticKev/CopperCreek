@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: inherit;
     color: inherit;
+	text-decoration: none;
   }
   html, body, #root {
     height: 100%;

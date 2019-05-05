@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from '@reach/router'
 // import companyLogo from '../../shared/assets/copperCreekConcepts.gif'
 
 let Wrapper = styled.section` 
@@ -63,7 +64,7 @@ export default class Header extends Component {
 	  <div>
 		<Wrapper>
 			{/* <img src={companyLogo} alt="logoimg"/> */}
-			<Logo>CopperCreek</Logo>
+			<Link to="/"><Logo>CopperCreek</Logo></Link>
 			<NavMenu>
 				<div></div>
 				<div></div>
@@ -71,9 +72,9 @@ export default class Header extends Component {
 				<span>Menu</span>
 			</NavMenu>
 			<NavbarWrapper>
-				<NavbarItem>Pricing</NavbarItem>
-				<NavbarItem>Catelog</NavbarItem>
-				<NavbarItem>About</NavbarItem>
+				<Link to="pricing"><NavbarItem>Pricing</NavbarItem></Link>
+				<Link to="catelog"><NavbarItem>Catelog</NavbarItem></Link>
+				<Link to="about"><NavbarItem>About</NavbarItem></Link>
 			</NavbarWrapper>
 		</Wrapper>
 	  </div>
