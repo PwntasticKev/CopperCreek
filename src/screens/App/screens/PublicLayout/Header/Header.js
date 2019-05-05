@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from '@reach/router'
+import MobileNav from './components/mobileMenuNav'
 // import companyLogo from '../../shared/assets/copperCreekConcepts.gif'
 
 let Wrapper = styled.section` 
@@ -8,7 +9,6 @@ let Wrapper = styled.section`
 	justify-content: space-between; 
 	padding: 10px 15px;
 	align-items: center;
-
 	img {
 		width: 95px;
     	max-height: 30px;
@@ -94,6 +94,7 @@ export default class Header extends Component {
 					<NavbarItem>About</NavbarItem>
 				</Link>
 			</NavbarWrapper>
+			<MobileNav/>
 		</Wrapper>
 	  </div>
 	)
