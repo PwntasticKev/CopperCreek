@@ -59,22 +59,40 @@ let NavbarItem = styled.div`
 `
 
 export default class Header extends Component {
+
+	state = {
+		menuOpen: false
+	}
+
+	menuToggle(e) {
+		this.setState({
+			menuOpen: !this.state.menuOpen,
+		},_ => console.log(this.state))
+	}
   render() {
 	return (
 	  <div>
 		<Wrapper>
 			{/* <img src={companyLogo} alt="logoimg"/> */}
-			<Link to="/"><Logo>CopperCreek</Logo></Link>
-			<NavMenu>
+			<Link to="/">
+				<Logo>CopperCreek</Logo>
+			</Link>
+			<NavMenu onClick={e => this.menuToggle(e)}>
 				<div></div>
 				<div></div>
 				<div></div>
 				<span>Menu</span>
 			</NavMenu>
 			<NavbarWrapper>
-				<Link to="pricing"><NavbarItem>Pricing</NavbarItem></Link>
-				<Link to="catelog"><NavbarItem>Catelog</NavbarItem></Link>
-				<Link to="about"><NavbarItem>About</NavbarItem></Link>
+				<Link to="pricing">
+					<NavbarItem>Pricing</NavbarItem>
+				</Link>
+				<Link to="catelog">
+					<NavbarItem>Catelog</NavbarItem>
+				</Link>
+				<Link to="about">
+					<NavbarItem>About</NavbarItem>
+				</Link>
 			</NavbarWrapper>
 		</Wrapper>
 	  </div>

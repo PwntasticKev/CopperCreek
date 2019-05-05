@@ -8,7 +8,6 @@ let Button = styled.button `
 	background: #0066CC;
 	padding: 10px 15px;
 	color: white;
-
 `
 
 export default class DefaultButton extends Component {
