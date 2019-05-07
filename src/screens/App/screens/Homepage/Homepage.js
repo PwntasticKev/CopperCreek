@@ -4,6 +4,7 @@ import Button from '../shared/components/Button'
 
 let H1 = styled.h1`
 	text-align: center;
+	color: black;
 `
 
 let H1subtext = styled.h2`

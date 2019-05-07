@@ -54,17 +54,26 @@ let NavbarWrapper = styled.section`
 
 	} `
 let NavbarItem = styled.div`
-	margin: 0 10px;
+	margin: 10px 10px;
+ 	border-bottom: 1px solid black;
+	 @media(min-width: 1025px) {
+		 margin: 0 10px;
+		 border-bottom: none;
+	 }
 `
 
 let CloseNavMenu = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	padding-right: 10px;
+	@media(min-width: 1025px) {
+		display: none;
+	}
 `
 
 let NavMenuWrapper = styled.section`
 	display: ${props => props.display};
+	flex-direction: column;
 	background: lightgray;
 	height: 100vh;
 	width: 220px;
@@ -73,7 +82,9 @@ let NavMenuWrapper = styled.section`
 	right: 0;
 	padding: 15px 5px;
 	@media(min-width: 1025px) {
-		display: none;
+		display: flex;
+		height: auto;
+		background: #ffff
 	}
 `
 
@@ -86,8 +97,9 @@ export default class Header extends Component {
 	menuToggle(e) {
 		this.setState({
 			menuOpen: !this.state.menuOpen,
-		},_ => console.log(this.state))
+		}, _ => console.log(this.state))
 	}
+
   render() {
 	return (
 	  <div>

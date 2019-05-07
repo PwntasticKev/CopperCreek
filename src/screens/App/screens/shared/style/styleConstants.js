@@ -8,6 +8,10 @@ export  const COLORS = {
 	}
 }
 
+export const BORDERRADIUS = {
+	button: "5px"
+}
+
 export const FONT = {
 	primary: {
 		fontFamily: "sans"
