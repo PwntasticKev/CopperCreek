@@ -1,7 +1,7 @@
 export  const COLORS = {
 	blue: {
 		primary: "#0066CC",
-		secondary: ""
+		secondary: "#E6AD00"
 	},
 	yellow: {
 		primary: ""
@@ -10,6 +10,10 @@ export  const COLORS = {
 
 export const BORDERRADIUS = {
 	button: "5px"
+}
+
+export const BUTTONS = {
+
 }
 
 export const FONT = {

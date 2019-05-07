@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Link } from '@reach/router'
-// import MobileNav from './components/mobileMenuNav'
-// import companyLogo from '../../shared/assets/copperCreekConcepts.gif'
+import { Link } from '@reach/router';
+import { COLORS } from '../../shared/style/styleConstants'
 
 let Wrapper = styled.section` 
 	display: flex; 
@@ -18,7 +17,7 @@ let Wrapper = styled.section`
 let Logo = styled.div`
 	font-weight: 700;
 	font-size: 20px;
-	color: #0066CC;
+	color: ${ COLORS.blue.primary };
 `
 
 let NavMenu = styled.div`
@@ -97,40 +96,37 @@ export default class Header extends Component {
 	menuToggle(e) {
 		this.setState({
 			menuOpen: !this.state.menuOpen,
-		}, _ => console.log(this.state))
+		})
 	}
 
   render() {
 	return (
-	  <div>
 		<Wrapper>
 			{/* <img src={companyLogo} alt="logoimg"/> */}
 			<Link to="/">
 				<Logo>CopperCreek</Logo>
 			</Link>
 			<NavMenu onClick={e => this.menuToggle(e)}>
-				<div></div>
-				<div></div>
-				<div></div>
+				<div />
+				<div />
+				<div />
 				<span>Menu</span>
 			</NavMenu>
-			{/* <MobileNav/> */}
 			<NavMenuWrapper display={this.state.menuOpen ? "flex" : "none"}>
-				<CloseNavMenu onClick={e => this.menuToggle(e)}>X</CloseNavMenu>
-					<NavbarWrapper >
-							<Link to="pricing">
-								<NavbarItem>Pricing</NavbarItem>
-							</Link>
-							<Link to="catelog">
-								<NavbarItem>Catelog</NavbarItem>
-							</Link>
-							<Link to="about">
-								<NavbarItem>About</NavbarItem>
-							</Link>
-						</NavbarWrapper>
-	  		</NavMenuWrapper>
+				<CloseNavMenu onClick={e => this.menuToggle(e)}> X </CloseNavMenu>
+				<NavbarWrapper>
+					<Link to="pricing">
+						<NavbarItem>Pricing</NavbarItem>
+					</Link>
+					<Link to="catelog">
+						<NavbarItem>Catelog</NavbarItem>
+					</Link>
+					<Link to="about">
+						<NavbarItem>About</NavbarItem>
+					</Link>
+				</NavbarWrapper>
+			</NavMenuWrapper>
 		</Wrapper>
-	  </div>
 	)
   }
 }
