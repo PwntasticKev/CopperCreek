@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from '@reach/router'
-import MobileNav from './components/mobileMenuNav'
+// import MobileNav from './components/mobileMenuNav'
 // import companyLogo from '../../shared/assets/copperCreekConcepts.gif'
 
 let Wrapper = styled.section` 
@@ -49,13 +49,32 @@ span {
 }
 `
 let NavbarWrapper = styled.section` 
-	display: none; 
 	@media(min-width: 1025px) { 
 		display: flex; 
 
 	} `
 let NavbarItem = styled.div`
 	margin: 0 10px;
+`
+
+let CloseNavMenu = styled.div`
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 10px;
+`
+
+let NavMenuWrapper = styled.section`
+	display: ${props => props.display};
+	background: lightgray;
+	height: 100vh;
+	width: 220px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 15px 5px;
+	@media(min-width: 1025px) {
+		display: none;
+	}
 `
 
 export default class Header extends Component {
@@ -83,18 +102,21 @@ export default class Header extends Component {
 				<div></div>
 				<span>Menu</span>
 			</NavMenu>
-			<NavbarWrapper>
-				<Link to="pricing">
-					<NavbarItem>Pricing</NavbarItem>
-				</Link>
-				<Link to="catelog">
-					<NavbarItem>Catelog</NavbarItem>
-				</Link>
-				<Link to="about">
-					<NavbarItem>About</NavbarItem>
-				</Link>
-			</NavbarWrapper>
-			<MobileNav/>
+			{/* <MobileNav/> */}
+			<NavMenuWrapper display={this.state.menuOpen ? "flex" : "none"}>
+				<CloseNavMenu onClick={e => this.menuToggle(e)}>X</CloseNavMenu>
+					<NavbarWrapper >
+							<Link to="pricing">
+								<NavbarItem>Pricing</NavbarItem>
+							</Link>
+							<Link to="catelog">
+								<NavbarItem>Catelog</NavbarItem>
+							</Link>
+							<Link to="about">
+								<NavbarItem>About</NavbarItem>
+							</Link>
+						</NavbarWrapper>
+	  		</NavMenuWrapper>
 		</Wrapper>
 	  </div>
 	)
