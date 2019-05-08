@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Button from '../shared/components/Button'
 import { Link } from '@reach/router'
 import { BUTTONS } from '../shared/style/styleConstants';
+import Splash from '../shared/assets/somedude.jpeg'
 
 let H1 = styled.h1`
 	text-align: center;
@@ -22,6 +23,15 @@ let ButtonWrapper = styled.section`
 	align-items: center;
 `
 
+let SplashImg = styled.div`
+	height: 260px;
+	width: 100%;
+	background: url(${Splash}) no-repeat;
+	background-size: cover;
+    background-position: bottom;
+`
+
+
 export default class Homepage extends Component {
 
 state = {
@@ -33,13 +43,13 @@ state = {
 	  <div>
 	  	<H1>Create and Customize your products</H1>
 		<H1subtext>Easy print-on-demand service, offering you the best bang for your buck</H1subtext>
-		<div>image from splash here</div>
+		<SplashImg src={ Splash }>image from splash here</SplashImg>
 		<ButtonWrapper>
 			<Link to="/catelog">
-				<Button style={BUTTONS.primary}>Check out our Catelog</Button>
+				<Button style={ BUTTONS.primary }>Check out our Catelog</Button>
 			</Link>
 			<Link to="/catelog">
-				<Button style={BUTTONS.secondary}>Pricing</Button>
+				<Button style={ BUTTONS.secondary }>Pricing</Button>
 			</Link>
 		</ButtonWrapper>
 	  </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled  from 'styled-components'
-import { COLORS, BORDERRADIUS, BOX_SHADOW, BUTTONS } from '../style/styleConstants'
+import { COLORS, BORDERRADIUS, BOX_SHADOW } from '../style/styleConstants'
 
 let Button = styled.button `
 	outline: none;
@@ -14,7 +14,7 @@ let Button = styled.button `
 	/* background: linear-gradient(to top right, ${ COLORS.blue.primary } 0%, ${ COLORS.blue.primary } 35%, ${ COLORS.blue.secondary } 100%); */
 `
 export default class DefaultButton extends Component {
-	
+
 	componentDidMount() {
 		console.log('props',this.props)
 	}
