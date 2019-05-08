@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Button from '../shared/components/Button'
+import { Link } from '@reach/router'
+import { BUTTONS } from '../shared/style/styleConstants';
+import Splash from '../shared/assets/somedude.jpeg'
 
 let H1 = styled.h1`
 	text-align: center;
+	color: black;
 `
 
 let H1subtext = styled.h2`
@@ -12,10 +16,26 @@ let H1subtext = styled.h2`
 	font-size: 16px;
 `
 
+let ButtonWrapper = styled.section`
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+`
+
+let SplashImg = styled.div`
+	height: 260px;
+	width: 100%;
+	background: url(${Splash}) no-repeat;
+	background-size: cover;
+    background-position: bottom;
+`
+
+
 export default class Homepage extends Component {
 
 state = {
-	menuOpen : false // This will be global later.
+	menuOpen : false,
 }
 
   render() {
@@ -23,22 +43,17 @@ state = {
 	  <div>
 	  	<H1>Create and Customize your products</H1>
 		<H1subtext>Easy print-on-demand service, offering you the best bang for your buck</H1subtext>
-		<div>image from splash here</div>
-		<section>
-			<Button>Button 1</Button>
-			<Button>Button 2</Button>
-		</section>
+		<SplashImg src={ Splash }>image from splash here</SplashImg>
+		<ButtonWrapper>
+			<Link to="/catelog">
+				<Button style={ BUTTONS.primary }>Check out our Catelog</Button>
+			</Link>
+			<Link to="/catelog">
+				<Button style={ BUTTONS.secondary }>Pricing</Button>
+			</Link>
+		</ButtonWrapper>
 	  </div>
 	)
   }
 }
-
-
-// let Burger = styled.div `
-
-// `
-
-// let CompanyLogo = styled.div `
-
-// `
 
