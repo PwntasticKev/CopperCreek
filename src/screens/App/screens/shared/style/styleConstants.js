@@ -13,7 +13,8 @@ export const BORDERRADIUS = {
 }
 
 export const BUTTONS = {
-
+	primary: "#0066CC",
+	secondary: "#E6AD00"
 }
 
 export const FONT = {

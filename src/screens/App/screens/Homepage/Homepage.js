@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Button from '../shared/components/Button'
 import { Link } from '@reach/router'
+import { BUTTONS } from '../shared/style/styleConstants';
 
 let H1 = styled.h1`
 	text-align: center;
@@ -35,10 +36,10 @@ state = {
 		<div>image from splash here</div>
 		<ButtonWrapper>
 			<Link to="/catelog">
-				<Button>Check out our Catelog</Button>
+				<Button style={BUTTONS.primary}>Check out our Catelog</Button>
 			</Link>
 			<Link to="/catelog">
-				<Button>Pricing</Button>
+				<Button style={BUTTONS.secondary}>Pricing</Button>
 			</Link>
 		</ButtonWrapper>
 	  </div>
