@@ -5,9 +5,9 @@ import { COLORS, BORDERRADIUS, BOX_SHADOW } from '../style/styleConstants'
 let Button = styled.button `
 	outline: none;
 	border: none;
-	width: 250px;
+	width: 100%;
 	background: ${ props => props.theme};
-	padding: 10px 15px;
+	padding: 10px 40px;
 	color: white;
 	border-radius: ${ BORDERRADIUS.button };
 	box-shadow: ${ BOX_SHADOW };

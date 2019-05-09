@@ -9,7 +9,7 @@ export  const COLORS = {
 }
 
 export const BORDERRADIUS = {
-	button: "5px"
+	button: "7px"
 }
 
 export const BUTTONS = {
