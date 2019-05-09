@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Button from '../shared/components/Button'
 import { Link } from '@reach/router'
 import { BUTTONS } from '../shared/style/styleConstants';
+import EmailForm from './components/EmailForm/EmailForm'
 const Splash = 'https://duw6wk4ou1qt.cloudfront.net/static/v700/images/homepage/printful-products.png'
 
 let H1 = styled.h1`
@@ -51,6 +52,7 @@ state = {
 			<Link to="/pricing">
 				<Button style={ BUTTONS.secondary }>Pricing</Button>
 			</Link>
+			<EmailForm/>
 		</ButtonWrapper>
 	  </div>
 	)
