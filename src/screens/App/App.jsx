@@ -19,7 +19,6 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     margin: 0;
-    overflow: hidden;
     font-family: system-ui;
 	color: #777;
     line-height: 1.5;

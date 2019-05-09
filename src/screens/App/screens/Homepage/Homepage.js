@@ -40,7 +40,7 @@ state = {
 
   render() {
 	return (
-	  <div>
+	  <div style={{overflow: "scroll"}}>
 	  	<H1>Create and Customize your products</H1>
 		<H1subtext>Easy print-on-demand service, offering you the best bang for your buck</H1subtext>
 		<SplashImg src={ Splash }>image from splash here</SplashImg>
@@ -51,6 +51,14 @@ state = {
 			<Link to="/catelog">
 				<Button style={ BUTTONS.secondary }>Pricing</Button>
 			</Link>
+			<div>4</div>
+			<div>4</div>
+			<div>4</div>
+			<div>4</div>
+			<div>4</div>
+			<div>4</div>
+			<div>4</div>
+			<div>4	4	</div>
 		</ButtonWrapper>
 	  </div>
 	)
