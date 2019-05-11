@@ -16,7 +16,6 @@ let Button = styled.button `
 export default class DefaultButton extends Component {
 
 	componentDidMount() {
-		console.log('props',this.props)
 	}
 
   render() {
