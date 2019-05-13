@@ -23,10 +23,10 @@ export default class componentName extends Component {
 			}, () => console.log(this.state))
 	}
 
-	submitEmail = (state) => {
+	submitEmail() {
 		console.log('get hit')
 		// function to send out email
-		console.log(state)
+		// console.log(state)
 	}
 
   render() {
@@ -44,9 +44,10 @@ export default class componentName extends Component {
 				<label>phone:</label>
 				<input name="phone" type="text" placeholder="Phone" onChange={this.handleChange}/>
 			</section>
-		  	<Button onClick={this.submitEmail( { ...this.state } ) } style={ BUTTONS.primary }>
-		  		Submit
+		  	<Button style={ BUTTONS.primary }>
+				<div onClick={() => this.submitEmail( { ...this.state } ) }>Submit</div>
 			</Button>
+
 		</FormWrapper>
 	)
   }

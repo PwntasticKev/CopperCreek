@@ -50,7 +50,7 @@ state = {
 				<Button style={ BUTTONS.primary }>Check out our Catelog</Button>
 			</Link>
 			<Link to="/pricing">
-				<Button style={ BUTTONS.secondary }>Pricing</Button>
+				<Button onChange={_ => console.log("whythe F")} style={ BUTTONS.secondary }>Pricing</Button>
 			</Link>
 			<EmailForm/>
 		</ButtonWrapper>

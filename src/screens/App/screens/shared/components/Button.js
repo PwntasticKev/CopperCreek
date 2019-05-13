@@ -21,7 +21,9 @@ export default class DefaultButton extends Component {
   render() {
 	return (
 	  <Button theme={ this.props.style  }>
-		{ this.props.children }
+		<div>
+			{ this.props.children }
+		</div>
 	  </Button>
 	)
   }
