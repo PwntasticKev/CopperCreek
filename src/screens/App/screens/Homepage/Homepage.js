@@ -52,8 +52,8 @@ state = {
 			<Link to="/pricing">
 				<Button onChange={_ => console.log("whythe F")} style={ BUTTONS.secondary }>Pricing</Button>
 			</Link>
-			<EmailForm/>
 		</ButtonWrapper>
+			<EmailForm/>
 	  </div>
 	)
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from '@reach/router';
-import { COLORS } from '../../shared/style/styleConstants'
+import { COLORS, BOX_SHADOW } from '../../shared/style/styleConstants'
 
 let Wrapper = styled.section` 
 	display: flex; 
@@ -72,6 +72,7 @@ let CloseNavMenu = styled.div`
 
 let NavMenuWrapper = styled.section`
 	display: ${props => props.display};
+	box-shadow: ${ BOX_SHADOW.boxShadow.dark };
 	flex-direction: column;
 	background: lightgray;
 	height: 100vh;
