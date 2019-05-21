@@ -53,8 +53,8 @@ let NavbarWrapper = styled.section`
 
 	} `
 let NavbarItem = styled.div`
-	margin: 10px 10px;
- 	border-bottom: 1px solid black;
+	padding: 10px 10px;
+ 	border-bottom: 1px solid lightgray;
 	 @media(min-width: 1025px) {
 		 margin: 0 10px;
 		 border-bottom: none;
@@ -74,7 +74,7 @@ let NavMenuWrapper = styled.section`
 	display: ${props => props.display};
 	box-shadow: ${ BOX_SHADOW.boxShadow.dark };
 	flex-direction: column;
-	background: lightgray;
+	background: white;
 	height: 100vh;
 	width: 220px;
 	position: absolute;

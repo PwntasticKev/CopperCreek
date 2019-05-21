@@ -63,6 +63,9 @@ export default class componentName extends Component {
 				<div onClick={() => this.submitEmail( { ...this.state } ) }>Submit</div>
 			</Button>
 
+			{/* on click change word to processing or sending email. add an icon to go until its been sent. 
+			after send disable the buttno and or cover the email with an ovrlay */}
+
 		</FormWrapper>
 	)
   }
