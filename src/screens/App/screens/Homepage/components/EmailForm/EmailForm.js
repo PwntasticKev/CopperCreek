@@ -27,20 +27,21 @@ let FormWrapper = styled.section`
 	}
 `
 
-export default class componentName extends Component {
+export default class EmailForm extends Component {
 
 	state = {
 		name: '',
 		email: '',
 		phone: '',
-		text: ''
+		text: '',
+		sendingEmail: false
 	}
 
 	handleChange = e => {
 		let { name, value } = e.target
 		this.setState({
 			[name]: value
-		}, () => console.log(this.state))
+		}, _ => console.log(this.state))
 	}
 
 	submitEmail(state) {
@@ -56,14 +57,18 @@ export default class componentName extends Component {
 		  <h1 style={{textAlign: "center", color: "white"}}>
 			Lets Get in Touch!
 		  </h1>
-				<section>
-					<input name="name" type="text" placeholder="Name" onChange={this.handleChange} required="true"/>
-					<input name="email" type="text" placeholder="Email" onChange={this.handleChange} required="true"/>
+				<section style={{padding: "0 45px"}}>
+				<div style={{display: "flex", alignItems: "center"}}>
+					<input name="name" type="text" placeholder="Name" onChange={this.handleChange} required={true}/>
 					<input name="phone" type="text" placeholder="Phone" onChange={this.handleChange}/>
-					<input name="text" type="text" placeholder="Phone" onChange={this.handleChange}/>
+				</div>
+					<input name="email" type="text" placeholder="Email" onChange={this.handleChange} required={true}/>
+					<input name="text" type="text" placeholder="Type here..." onChange={this.handleChange} columns="3" rows="3"/>
 				</section>
 		  	<Button style={ BUTTONS.primary }>
-				<div onClick={() => this.submitEmail( { ...this.state } ) }>Submit</div>
+				<div onClick={() => this.submitEmail( { ...this.state } ) }> 
+					{ !this.state.sendingEmail ? "Submit Email" : "Processing" } 
+				</div>
 			</Button>
 
 			{/* on click change word to processing or sending email. add an icon to go until its been sent. 
