@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Button from '../../../shared/components/Button'
-import { BUTTONS } from '../../../shared/style/styleConstants';
+import { BUTTONS, BORDER_RADIUS } from '../../../shared/style/styleConstants';
 
 let FormWrapper = styled.section`
 	background: #3D3732;
@@ -22,6 +22,7 @@ let FormWrapper = styled.section`
     		padding: 4px;
     		padding-left: 20px;
 			margin: 3px 0 3px 5px;
+			border-radius: ${ BORDER_RADIUS }
 		}
 	}
 `
@@ -31,7 +32,8 @@ export default class componentName extends Component {
 	state = {
 		name: '',
 		email: '',
-		phone: ''
+		phone: '',
+		text: ''
 	}
 
 	handleChange = e => {
@@ -51,13 +53,14 @@ export default class componentName extends Component {
   render() {
 	return (
 	  	<FormWrapper>
-		  <h1>
+		  <h1 style={{textAlign: "center", color: "white"}}>
 			Lets Get in Touch!
 		  </h1>
 				<section>
-					<input name="name" type="text" placeholder="Name" onChange={this.handleChange}/>
-					<input name="email" type="text" placeholder="Email" onChange={this.handleChange}/>
+					<input name="name" type="text" placeholder="Name" onChange={this.handleChange} required="true"/>
+					<input name="email" type="text" placeholder="Email" onChange={this.handleChange} required="true"/>
 					<input name="phone" type="text" placeholder="Phone" onChange={this.handleChange}/>
+					<input name="text" type="text" placeholder="Phone" onChange={this.handleChange}/>
 				</section>
 		  	<Button style={ BUTTONS.primary }>
 				<div onClick={() => this.submitEmail( { ...this.state } ) }>Submit</div>

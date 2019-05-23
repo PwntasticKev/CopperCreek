@@ -53,7 +53,7 @@ state = {
 				<Button onChange={_ => console.log("whythe F")} style={ BUTTONS.secondary }>Pricing</Button>
 			</Link>
 		</ButtonWrapper>
-			<EmailForm/>
+		<EmailForm/>
 	  </div>
 	)
   }

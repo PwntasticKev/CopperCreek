@@ -8,7 +8,7 @@ export  const COLORS = {
 	}
 }
 
-export const BORDERRADIUS = {
+export const BORDER_RADIUS = {
 	button: "7px"
 }
 

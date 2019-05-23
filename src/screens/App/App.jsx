@@ -28,7 +28,8 @@ const GlobalStyle = createGlobalStyle`
     -webkit-box-shadow: 0 0 0 30px white inset;
   }
   h1 {
-	  color: black
+	  color: black;
+	  margin: 0;
   }
   `
   
