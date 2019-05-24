@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Button from '../../../shared/components/Button'
-import { BUTTONS, BORDER_RADIUS } from '../../../shared/style/styleConstants';
+import Button from '../Button'
+import { BUTTONS, BORDER_RADIUS } from '../../style/styleConstants';
 
 let FormWrapper = styled.section`
 	background: #3D3732;

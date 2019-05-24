@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
+import styled from 'styled-components';
 
+let Wrapper = styled.section`
+	padding-top: 70px;
+`
 export default class Catelog extends Component {
   render() {
 	return (
-	  <div>
+	  <Wrapper>
 		{/* will contain a pagenated slider that will show samples and shirts done */}
 		{/* email us? */}
-	  </div>
+		Catelog 
+	  </Wrapper>
 	)
   }
 }

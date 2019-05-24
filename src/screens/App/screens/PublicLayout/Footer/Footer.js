@@ -6,8 +6,15 @@ import { Link } from '@reach/router'
 let Wrapper = styled.section`
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
+	padding: 15px 10px;
 
+`
+
+let FooterOptions = styled.ul`
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 2px;
 `
 
 
@@ -15,8 +22,8 @@ export default () => {
   return (
 	<div>
 		<Wrapper>
-			<img style={{width: "159px", maxHeight: "60px"}} src={ Logo } alt="logo"></img>
-			<ul>
+			<img style={{width: "130px", maxHeight: "60px"}} src={ Logo } alt="logo"></img>
+			<FooterOptions>
 				<li>
 					<Link to="pricing">Pricing</Link>
 				</li>
@@ -26,10 +33,10 @@ export default () => {
 				<li>
 					<Link to="pricing">Contact Us</Link>
 				</li>
-			</ul>
+			</FooterOptions>
 		</Wrapper>
 		{/* eslint-disable-next-line */}
-		<div>©️️ CopperCreek LLC</div>
+		<div style={{paddingLeft: "5px"}}>©️️ CopperCreek LLC</div>
 	</div>
   )
 }

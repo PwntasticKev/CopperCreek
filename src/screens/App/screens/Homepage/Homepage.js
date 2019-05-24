@@ -3,8 +3,14 @@ import styled from 'styled-components'
 import Button from '../shared/components/Button'
 import { Link } from '@reach/router'
 import { BUTTONS } from '../shared/style/styleConstants';
-import EmailForm from './components/EmailForm/EmailForm'
+import { Router } from '@reach/router'
+import Catelog from '../Catelog/Categlog'
+import EmailForm from '../shared/components/EmailForm'
 const Splash = 'https://duw6wk4ou1qt.cloudfront.net/static/v700/images/homepage/printful-products.png'
+
+let Wrapper = styled.section`
+	padding-top: 70px;
+`
 
 let H1 = styled.h1`
 	text-align: center;
@@ -41,7 +47,7 @@ state = {
 
   render() {
 	return (
-	  <div>
+	  <Wrapper>
 	  	<H1>Create and Customize your products</H1>
 		<H1subtext>Easy print-on-demand service, offering you the best bang for your buck</H1subtext>
 		<SplashImg src={ Splash }></SplashImg>
@@ -54,7 +60,10 @@ state = {
 			</Link>
 		</ButtonWrapper>
 		<EmailForm/>
-	  </div>
+		<Router>
+			<Catelog path="/catelog"/>
+		</Router>
+	  </Wrapper>
 	)
   }
 }
