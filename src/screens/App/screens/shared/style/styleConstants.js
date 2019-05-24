@@ -8,8 +8,8 @@ export  const COLORS = {
 	}
 }
 
-export const BORDERRADIUS = {
-	button: "5px"
+export const BORDER_RADIUS = {
+	button: "7px"
 }
 
 export const BUTTONS = {
@@ -17,14 +17,9 @@ export const BUTTONS = {
 	secondary: "#E6AD00"
 }
 
-export const FONT = {
-	primary: {
-		fontFamily: "sans"
-	}
-}
-
 export const BOX_SHADOW = {
 	boxShadow: {
-		boxShadow: 'rgba(0,0,0,1)'
+		light: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
+		dark: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);"
 	}
 }

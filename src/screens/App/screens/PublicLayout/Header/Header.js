@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from '@reach/router';
-import { COLORS } from '../../shared/style/styleConstants'
+import { COLORS, BOX_SHADOW } from '../../shared/style/styleConstants'
 
 let Wrapper = styled.section` 
 	display: flex; 
 	justify-content: space-between; 
 	padding: 10px 15px;
 	align-items: center;
+	position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+	box-shadow: ${ props => props.BOX_SHADOW};
 	img {
 		width: 95px;
     	max-height: 30px;
@@ -53,8 +58,8 @@ let NavbarWrapper = styled.section`
 
 	} `
 let NavbarItem = styled.div`
-	margin: 10px 10px;
- 	border-bottom: 1px solid black;
+	padding: 10px 10px;
+ 	border-bottom: 1px solid lightgray;
 	 @media(min-width: 1025px) {
 		 margin: 0 10px;
 		 border-bottom: none;
@@ -72,13 +77,16 @@ let CloseNavMenu = styled.div`
 
 let NavMenuWrapper = styled.section`
 	display: ${props => props.display};
+	box-shadow: ${ BOX_SHADOW.boxShadow.dark };
 	flex-direction: column;
-	background: lightgray;
-	height: 100vh;
+	background: white;
+	height: 97vh;
 	width: 220px;
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: -260px;
+	transform: translateX(-260px);
+	transition: transform 4s ease-in-out;
 	padding: 15px 5px;
 	@media(min-width: 1025px) {
 		display: flex;
@@ -90,7 +98,12 @@ let NavMenuWrapper = styled.section`
 export default class Header extends Component {
 
 	state = {
-		menuOpen: false
+		menuOpen: false,
+		headerScroll: false
+	}
+
+	componentDidMount() {
+		window.addEventListener("scroll", this.headerScroll)
 	}
 
 	menuToggle(e) {
@@ -99,9 +112,14 @@ export default class Header extends Component {
 		})
 	}
 
+	headerScroll = (e) => {
+		window.pageYOffset > 0 ? this.setState({ headerScroll:true }) : this.setState({ headerScroll:false })
+	}
+
   render() {
+	  let { headerScroll, menuOpen } = this.state
 	return (
-		<Wrapper>
+		<Wrapper BOX_SHADOW={ headerScroll ? BOX_SHADOW.boxShadow.dark : "white" }>
 			{/* <img src={companyLogo} alt="logoimg"/> */}
 			<Link to="/">
 				<Logo>CopperCreek</Logo>
@@ -112,7 +130,7 @@ export default class Header extends Component {
 				<div />
 				<span>Menu</span>
 			</NavMenu>
-			<NavMenuWrapper display={this.state.menuOpen ? "flex" : "none"}>
+			<NavMenuWrapper display={menuOpen ? "flex" : "none"}>
 				<CloseNavMenu onClick={e => this.menuToggle(e)}> X </CloseNavMenu>
 				<NavbarWrapper>
 					<Link to="pricing">

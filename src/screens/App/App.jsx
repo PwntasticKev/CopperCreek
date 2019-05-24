@@ -19,7 +19,6 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     margin: 0;
-    overflow: hidden;
     font-family: system-ui;
 	color: #777;
     line-height: 1.5;
@@ -29,7 +28,13 @@ const GlobalStyle = createGlobalStyle`
     -webkit-box-shadow: 0 0 0 30px white inset;
   }
   h1 {
-	  color: black
+	  color: black;
+	  margin: 0;
+  }
+  ul {
+	  list-style-type: none;
+	  padding: 0;
+	  margin: 0;
   }
   `
   
