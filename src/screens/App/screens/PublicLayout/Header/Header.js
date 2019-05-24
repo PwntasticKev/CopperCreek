@@ -8,6 +8,11 @@ let Wrapper = styled.section`
 	justify-content: space-between; 
 	padding: 10px 15px;
 	align-items: center;
+	position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+	box-shadow: ${ props => props.BOX_SHADOW};
 	img {
 		width: 95px;
     	max-height: 30px;
@@ -75,7 +80,7 @@ let NavMenuWrapper = styled.section`
 	box-shadow: ${ BOX_SHADOW.boxShadow.dark };
 	flex-direction: column;
 	background: white;
-	height: 100vh;
+	height: 97vh;
 	width: 220px;
 	position: absolute;
 	top: 0;
@@ -93,7 +98,12 @@ let NavMenuWrapper = styled.section`
 export default class Header extends Component {
 
 	state = {
-		menuOpen: false
+		menuOpen: false,
+		headerScroll: false
+	}
+
+	componentDidMount() {
+		window.addEventListener("scroll", this.headerScroll)
 	}
 
 	menuToggle(e) {
@@ -102,9 +112,14 @@ export default class Header extends Component {
 		})
 	}
 
+	headerScroll = (e) => {
+		window.pageYOffset > 0 ? this.setState({ headerScroll:true }) : this.setState({ headerScroll:false })
+	}
+
   render() {
+	  let { headerScroll, menuOpen } = this.state
 	return (
-		<Wrapper>
+		<Wrapper BOX_SHADOW={ headerScroll ? BOX_SHADOW.boxShadow.dark : "white" }>
 			{/* <img src={companyLogo} alt="logoimg"/> */}
 			<Link to="/">
 				<Logo>CopperCreek</Logo>
@@ -115,7 +130,7 @@ export default class Header extends Component {
 				<div />
 				<span>Menu</span>
 			</NavMenu>
-			<NavMenuWrapper display={this.state.menuOpen ? "flex" : "none"}>
+			<NavMenuWrapper display={menuOpen ? "flex" : "none"}>
 				<CloseNavMenu onClick={e => this.menuToggle(e)}> X </CloseNavMenu>
 				<NavbarWrapper>
 					<Link to="pricing">

@@ -31,6 +31,9 @@ const GlobalStyle = createGlobalStyle`
 	  color: black;
 	  margin: 0;
   }
+  ul {
+	  list-style-type: none;
+  }
   `
   
 class App extends Component {

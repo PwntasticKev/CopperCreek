@@ -6,11 +6,12 @@ import { BUTTONS, BORDER_RADIUS } from '../../../shared/style/styleConstants';
 let FormWrapper = styled.section`
 	background: #3D3732;
 	width: 100%;
-	padding: 30px 10px;
+	padding: 30px 45px;
 	section {
 		display: flex;
 		align-items : center;
 		flex-direction: column;
+		margin-bottom: 10px;
 		label {
 			margin-right: 5px;
 			color: white;
@@ -21,8 +22,14 @@ let FormWrapper = styled.section`
 		    border: none;
     		padding: 4px;
     		padding-left: 20px;
-			margin: 3px 0 3px 5px;
+			margin: 2px 0;
 			border-radius: ${ BORDER_RADIUS }
+			
+		}
+		div input {
+			&:nth-child(2) {
+				margin-left: 3px;
+			}
 		}
 	}
 `
@@ -57,7 +64,7 @@ export default class EmailForm extends Component {
 		  <h1 style={{textAlign: "center", color: "white"}}>
 			Lets Get in Touch!
 		  </h1>
-				<section style={{padding: "0 45px"}}>
+				<section>
 				<div style={{display: "flex", alignItems: "center"}}>
 					<input name="name" type="text" placeholder="Name" onChange={this.handleChange} required={true}/>
 					<input name="phone" type="text" placeholder="Phone" onChange={this.handleChange}/>
