@@ -10,6 +10,9 @@ const Splash = 'https://duw6wk4ou1qt.cloudfront.net/static/v700/images/homepage/
 
 let Wrapper = styled.section`
 	padding-top: 70px;
+	@media (min-width: 1025px) {
+		padding-top: 85px;
+	}
 `
 
 let H1 = styled.h1`
@@ -37,6 +40,19 @@ let SplashImg = styled.div`
 	background: url(${ Splash }) no-repeat;
 	background-size: contain;
 `
+let SplashEmailWrapper = styled.section`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	@media(min-width: 1025px) {
+		flex-direction: row;
+	}
+	&:first-of-type section{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+`
 
 
 export default class Homepage extends Component {
@@ -50,16 +66,20 @@ state = {
 	  <Wrapper>
 	  	<H1>Create and Customize your products</H1>
 		<H1subtext>Easy print-on-demand service, offering you the best bang for your buck</H1subtext>
-		<SplashImg src={ Splash }></SplashImg>
-		<ButtonWrapper>
-			<Link to="/catelog">
-				<Button style={ BUTTONS.primary }>Check out our Catelog</Button>
-			</Link>
-			<Link to="/pricing">
-				<Button onChange={_ => console.log("whythe F")} style={ BUTTONS.secondary }>Pricing</Button>
-			</Link>
-		</ButtonWrapper>
-		<EmailForm/>
+		<SplashEmailWrapper>
+			<section>
+				<SplashImg src={ Splash }></SplashImg>
+				<ButtonWrapper>
+					<Link to="/catelog">
+						<Button style={ BUTTONS.primary }>Check out our Catelog</Button>
+					</Link>
+					<Link to="/pricing">
+						<Button style={ BUTTONS.secondary }>Pricing</Button>
+					</Link>
+				</ButtonWrapper>
+			</section>
+			<EmailForm/>
+		</SplashEmailWrapper>
 		<Router>
 			<Catelog path="/catelog"/>
 		</Router>

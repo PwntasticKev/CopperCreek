@@ -23,8 +23,10 @@ let FormWrapper = styled.section`
     		padding: 4px;
     		padding-left: 20px;
 			margin: 2px 0;
-			border-radius: ${ BORDER_RADIUS }
-			
+			border-radius: ${ BORDER_RADIUS.input };
+			@media(min-width: 1025px) {
+				padding: 10px;
+			}
 		}
 		div input {
 			&:nth-child(2) {

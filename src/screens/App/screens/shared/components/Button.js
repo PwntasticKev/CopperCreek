@@ -9,6 +9,7 @@ let Button = styled.button `
 	background: ${ props => props.theme};
 	padding: 10px 40px;
 	color: white;
+	min-width: 245px;
 	border-radius: ${ BORDER_RADIUS.button };
 	box-shadow: ${ BOX_SHADOW };
 	/* background: linear-gradient(to top right, ${ COLORS.blue.primary } 0%, ${ COLORS.blue.primary } 35%, ${ COLORS.blue.secondary } 100%); */

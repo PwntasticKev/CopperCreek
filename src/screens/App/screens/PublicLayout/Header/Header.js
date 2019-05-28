@@ -17,6 +17,9 @@ let Wrapper = styled.section`
 		width: 95px;
     	max-height: 30px;
 	}
+	@media (min-width: 1025px) {
+		padding: 0 15px;
+	}
 `
 
 let Logo = styled.div`
@@ -60,6 +63,12 @@ let NavbarWrapper = styled.section`
 let NavbarItem = styled.div`
 	padding: 10px 10px;
  	border-bottom: 1px solid lightgray;
+	 &:hover {
+		background: lightgray;
+    	opacity: 0.7;
+    	border-radius: 5px;
+    	transition: background 1s ease-in-out;
+	 }
 	 @media(min-width: 1025px) {
 		 margin: 0 10px;
 		 border-bottom: none;
@@ -91,7 +100,10 @@ let NavMenuWrapper = styled.section`
 	@media(min-width: 1025px) {
 		display: flex;
 		height: auto;
-		background: #ffff
+		background: #ffff;
+		box-shadow: none;
+		width: auto;
+		position: relative;
 	}
 `
 
