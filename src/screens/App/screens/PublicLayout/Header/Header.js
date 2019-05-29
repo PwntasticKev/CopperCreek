@@ -104,6 +104,7 @@ let NavMenuWrapper = styled.section`
 		box-shadow: none;
 		width: auto;
 		position: relative;
+		padding: 5px;
 	}
 `
 

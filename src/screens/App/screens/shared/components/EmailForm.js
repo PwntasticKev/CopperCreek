@@ -12,6 +12,9 @@ let FormWrapper = styled.section`
 		align-items : center;
 		flex-direction: column;
 		margin-bottom: 10px;
+		@media ( min-width: 1025px) {
+			margin: 0;
+		}
 		label {
 			margin-right: 5px;
 			color: white;
@@ -33,6 +36,14 @@ let FormWrapper = styled.section`
 				margin-left: 3px;
 			}
 		}
+	}
+`
+
+let InputWrapper = styled.section`
+	display: flex;
+	flex-direction: row;
+	@media ( min-width: 1025px) {
+		flex-direction: column;
 	}
 `
 
@@ -67,12 +78,12 @@ export default class EmailForm extends Component {
 			Lets Get in Touch!
 		  </h1>
 				<section>
-				<div style={{display: "flex", alignItems: "center"}}>
+				<InputWrapper>
 					<input name="name" type="text" placeholder="Name" onChange={this.handleChange} required={true}/>
 					<input name="phone" type="text" placeholder="Phone" onChange={this.handleChange}/>
-				</div>
+				</InputWrapper>
 					<input name="email" type="text" placeholder="Email" onChange={this.handleChange} required={true}/>
-					<input name="text" type="text" placeholder="Type here..." onChange={this.handleChange} columns="3" rows="3"/>
+					<input name="text" type="text" placeholder="Type here..." onChange={this.handleChange} cols="3" rows="3"/>
 				</section>
 		  	<Button style={ BUTTONS.primary }>
 				<div onClick={() => this.submitEmail( { ...this.state } ) }> 

@@ -32,13 +32,23 @@ let ButtonWrapper = styled.section`
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
+	@media(min-width: 1025px) {
+		flex-direction: row !important;
+		a {
+			margin: 0 5px;
+		}
+	}
 `
 
-let SplashImg = styled.div`
-	height: 400px;
-	width: 100%;
-	background: url(${ Splash }) no-repeat;
-	background-size: contain;
+let SplashImg = styled.img`
+	height: auto;
+	max-height: 350px;
+	margin: 0 auto;
+	@media(min-width: 1025px) { 
+		max-width: 400px;
+	}
+	/* background: url(${ Splash }) no-repeat;
+	background-size: contain; */
 `
 let SplashEmailWrapper = styled.section`
 	display: flex;
@@ -67,7 +77,7 @@ state = {
 	  	<H1>Create and Customize your products</H1>
 		<H1subtext>Easy print-on-demand service, offering you the best bang for your buck</H1subtext>
 		<SplashEmailWrapper>
-			<section>
+			<section style={{display: "flex", justifyContent: "center"}}>
 				<SplashImg src={ Splash }></SplashImg>
 				<ButtonWrapper>
 					<Link to="/catelog">
