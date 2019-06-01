@@ -1,6 +1,11 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { BOX_SHADOW } from "../../shared/style/styleConstants"
+import { BOX_SHADOW } from "../style/styleConstants"
+import SweatImg from '../assets/sweats.jpg'
+import Jacket from '../assets/jacket.png'
+import Hat from '../assets/hats.jpg'
+import SweatShirt from '../assets/sweatshirt.png'
+import ButtonUp from '../assets/buttonup.jpg'
 
 let Wrapper = styled.section`
 	padding: 0 5px;
@@ -15,18 +20,16 @@ let CardContainer = styled.section`
 `
 export default class ItemCard extends Component {
 	state = {
-		types: ["shirt", "sweats", "sweatshirt", "hats", "buttonups"],
-		imgLinks: ["1", "2", "3", "4", "5", "6"]
+		types: ["Shirts", "Sweats", "Sweatshirts", "Hats", "Button ups"],
+		imgLinks: [Jacket,SweatImg, SweatShirt, Hat, ButtonUp]
 	}
 	render() {
 		let { types, imgLinks } = this.state
-
-		let imgLink = imgLinks.map(v => v)
-
+		var imgLink = imgLinks.map((v,i) => v)
 		let cardType = types.map((v, i) => {
 			return (
-				<CardContainer id={ i }>
-					<img src={ imgLink } alt="Img Here" />
+				<CardContainer key={ i }>
+					<img src={ imgLink[i] } alt="Img Here" />
 					<h4>{ v }</h4>
 				</CardContainer>
 			)
