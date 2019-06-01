@@ -99,7 +99,6 @@ state = {
 		</SplashEmailWrapper>
 		<Router>
 			<Catelog path="/catelog"/>
-			<Faq path="/faq"/>
 		</Router>
 	  </Wrapper>
 	)
