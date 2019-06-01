@@ -12,7 +12,11 @@ let Button = styled.button `
 	min-width: 245px;
 	border-radius: ${ BORDER_RADIUS.button };
 	box-shadow: ${ BOX_SHADOW };
+	transition: all .5s ease-in-out;
 	/* background: linear-gradient(to top right, ${ COLORS.blue.primary } 0%, ${ COLORS.blue.primary } 35%, ${ COLORS.blue.secondary } 100%); */
+	&:hover {
+		box-shadow: inset 0 0 0 5px #E6AD00;
+	}
 `
 export default class DefaultButton extends Component {
 

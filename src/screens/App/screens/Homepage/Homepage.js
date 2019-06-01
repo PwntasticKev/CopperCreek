@@ -6,6 +6,7 @@ import { BUTTONS } from '../shared/style/styleConstants';
 import { Router } from '@reach/router'
 import Catelog from '../Catelog/Categlog'
 import EmailForm from '../shared/components/EmailForm'
+import TypeCard from '../shared/components/TypeCard'
 const Splash = 'https://duw6wk4ou1qt.cloudfront.net/static/v700/images/homepage/printful-products.png'
 
 let Wrapper = styled.section`
@@ -32,6 +33,7 @@ let ButtonWrapper = styled.section`
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 	@media(min-width: 1025px) {
 		flex-direction: row !important;
 		a {
@@ -76,22 +78,28 @@ state = {
 	  <Wrapper>
 	  	<H1>Create and Customize your products</H1>
 		<H1subtext>Easy print-on-demand service, offering you the best bang for your buck</H1subtext>
-		<SplashEmailWrapper>
-			<section style={{display: "flex", justifyContent: "center"}}>
+		<SplashEmailWrapper style={{display: "flex", justifyContent: "center"}}>
+			{/* <section > */}
 				<SplashImg src={ Splash }></SplashImg>
 				<ButtonWrapper>
 					<Link to="/catelog">
 						<Button style={ BUTTONS.primary }>Check out our Catelog</Button>
 					</Link>
-					<Link to="/pricing">
-						<Button style={ BUTTONS.secondary }>Pricing</Button>
+					<Link to="/order">
+						<Button style={ BUTTONS.secondary }>Order</Button>
+						<div style={{ fontSize: "13px", fontStyle: "italic" }}>Min order of 30</div>
 					</Link>
 				</ButtonWrapper>
+			{/* </section> */}
+			<section>
+				<H1>Custom Clothing made for you</H1>
+				<TypeCard/>
 			</section>
 			<EmailForm/>
 		</SplashEmailWrapper>
 		<Router>
 			<Catelog path="/catelog"/>
+			<Faq path="/faq"/>
 		</Router>
 	  </Wrapper>
 	)

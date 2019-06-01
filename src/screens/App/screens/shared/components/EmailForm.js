@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Button from './Button'
 import { BUTTONS, BORDER_RADIUS } from '../style/styleConstants';
 
+// user should be able to select a type (shirt/cotton for example) and in the email it should know through the url what kind of product?
+
 let FormWrapper = styled.section`
 	background: #3D3732;
 	width: 100%;
@@ -20,7 +22,7 @@ let FormWrapper = styled.section`
 			color: white;
 			margin: 7px 0;
 		}
-		input {
+		input, textarea {
 			width: 100%;
 		    border: none;
     		padding: 4px;
@@ -41,7 +43,7 @@ let FormWrapper = styled.section`
 
 let InputWrapper = styled.section`
 	display: flex;
-	flex-direction: row;
+	flex-direction: row !important;
 	@media ( min-width: 1025px) {
 		flex-direction: column;
 	}
@@ -83,7 +85,7 @@ export default class EmailForm extends Component {
 					<input name="phone" type="text" placeholder="Phone" onChange={this.handleChange}/>
 				</InputWrapper>
 					<input name="email" type="text" placeholder="Email" onChange={this.handleChange} required={true}/>
-					<input name="text" type="text" placeholder="Type here..." onChange={this.handleChange} cols="3" rows="3"/>
+					<textarea name="text" type="text" placeholder="Type here..." onChange={this.handleChange} cols="3" rows="3"></textarea>
 				</section>
 		  	<Button style={ BUTTONS.primary }>
 				<div onClick={() => this.submitEmail( { ...this.state } ) }> 

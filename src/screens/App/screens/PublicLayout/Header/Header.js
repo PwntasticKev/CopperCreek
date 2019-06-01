@@ -89,13 +89,14 @@ let NavMenuWrapper = styled.section`
 	box-shadow: ${ BOX_SHADOW.boxShadow.dark };
 	flex-direction: column;
 	background: white;
-	height: 97vh;
+	min-height: 60vh;
+	max-height: 97vh;
 	width: 220px;
 	position: absolute;
 	top: 0;
 	right: -260px;
 	transform: translateX(-260px);
-	transition: transform 4s ease-in-out;
+	transition: all .5s ease-in-out;
 	padding: 15px 5px;
 	@media(min-width: 1025px) {
 		display: flex;
