@@ -8,12 +8,14 @@ let Wrapper = styled.section`
 	align-items: center;
 	justify-content: space-between;
 	padding: 15px 10px;
-
+	@media(min-width: 1025px) {
+		padding: 0 10px;
+	}
 `
 
 let FooterOptions = styled.ul`
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat();
 	grid-column-gap: 2px;
 `
 
