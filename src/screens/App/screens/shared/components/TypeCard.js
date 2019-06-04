@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { Link, Router } from '@reach/router'
+import { Link } from '@reach/router'
 import { BOX_SHADOW } from "../style/styleConstants"
 import SweatImg from '../assets/sweats.jpg'
 import Jacket from '../assets/jacket.png'
