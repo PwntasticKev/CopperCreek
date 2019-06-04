@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   input[type="password"]:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px white inset;
   }
-  h1 {
+  h1, h2, h3, h4 {
 	  color: black;
 	  margin: 0;
   }

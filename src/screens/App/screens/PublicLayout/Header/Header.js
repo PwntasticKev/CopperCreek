@@ -89,8 +89,7 @@ let NavMenuWrapper = styled.section`
 	box-shadow: ${ BOX_SHADOW.boxShadow.dark };
 	flex-direction: column;
 	background: white;
-	min-height: 60vh;
-	max-height: 97vh;
+	height: 97vh;
 	width: 220px;
 	position: absolute;
 	top: 0;
@@ -107,6 +106,16 @@ let NavMenuWrapper = styled.section`
 		position: relative;
 		padding: 5px;
 	}
+`
+
+let XClose = styled.div`
+	width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightgray;
 `
 
 export default class Header extends Component {
@@ -145,7 +154,7 @@ export default class Header extends Component {
 				<span>Menu</span>
 			</NavMenu>
 			<NavMenuWrapper display={menuOpen ? "flex" : "none"}>
-				<CloseNavMenu onClick={e => this.menuToggle(e)}> X </CloseNavMenu>
+				<CloseNavMenu onClick={e => this.menuToggle(e)}> <XClose>X</XClose> </CloseNavMenu>
 				<NavbarWrapper>
 					<Link to="pricing">
 						<NavbarItem>Pricing</NavbarItem>
