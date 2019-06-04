@@ -59,11 +59,6 @@ let SplashEmailWrapper = styled.section`
 	@media(min-width: 1025px) {
 		flex-direction: row;
 	}
-	&:first-of-type section{
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-	}
 `
 
 
