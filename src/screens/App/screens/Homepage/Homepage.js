@@ -57,7 +57,7 @@ let SplashEmailWrapper = styled.section`
 	flex-direction: column;
 	justify-content: space-between;
 	@media(min-width: 1025px) {
-		flex-direction: row;
+		/* flex-direction: row; */
 	}
 `
 

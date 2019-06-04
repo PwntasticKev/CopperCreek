@@ -25,8 +25,8 @@ let FormWrapper = styled.section`
 		input, textarea {
 			width: 100%;
 		    border: none;
-    		padding: 4px;
-    		padding-left: 20px;
+    		padding: 10px;
+    		padding-left: 15px;
 			margin: 2px 0;
 			border-radius: ${ BORDER_RADIUS.input };
 			@media(min-width: 1025px) {
@@ -77,13 +77,13 @@ export default class EmailForm extends Component {
 	return (
 	  	<FormWrapper>
 		  <h1 style={{textAlign: "center", color: "white"}}>
-			Lets Get in Touch!
+			Lets Get in Touch!!
 		  </h1>
 				<section>
-				<InputWrapper>
+				{/* <InputWrapper> */}
 					<input name="name" type="text" placeholder="Name" onChange={this.handleChange} required={true}/>
 					<input name="phone" type="text" placeholder="Phone" onChange={this.handleChange}/>
-				</InputWrapper>
+				{/* </InputWrapper> */}
 					<input name="email" type="text" placeholder="Email" onChange={this.handleChange} required={true}/>
 					<textarea name="text" type="text" placeholder="Type here..." onChange={this.handleChange} cols="3" rows="3"></textarea>
 				</section>
