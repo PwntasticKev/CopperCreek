@@ -71,6 +71,8 @@ state = {
   render() {
 	return (
 	  <Wrapper>
+	  <p><iframe title="wangoframe" frameBorder="0" height="1000" id="bwiframe" src="https://www.visitahoustontexas.com/includes/plugins/nav/preview_civs/?type=nav_version&typeArgs[preview_type]=draft&typeArgs[version_id]=5cfeb5d724e6361040695f78&typeArgs[nav_id]=5cd9d9a96c3c81b80e414cb3" style={{zIndex:"999999"}} width="100%"></iframe>
+	  <script type="text/javascript" src="https://app.bandwango.com/js/checkout/embed.js"></script></p>
 	  	<H1>Create and Customize your products</H1>
 		<H1subtext>Easy print-on-demand service, offering you the best bang for your buck</H1subtext>
 		<SplashEmailWrapper style={{display: "flex", justifyContent: "center"}}>
@@ -99,4 +101,3 @@ state = {
 	)
   }
 }
-
