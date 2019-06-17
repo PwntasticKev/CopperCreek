@@ -122,7 +122,7 @@ export default class Header extends Component {
 
 	state = {
 		menuOpen: false,
-		headerScroll: false
+		headerScroll: false,
 	}
 
 	componentDidMount() {
@@ -156,13 +156,16 @@ export default class Header extends Component {
 			<NavMenuWrapper display={menuOpen ? "flex" : "none"}>
 				<CloseNavMenu onClick={e => this.menuToggle(e)}> <XClose>X</XClose> </CloseNavMenu>
 				<NavbarWrapper>
-					<Link to="pricing">
+					<Link to="/" onClick={_ => this.setState({menuOpen:false})}>
+						<NavbarItem>Home</NavbarItem>
+					</Link>
+					<Link to="pricing" onClick={_ => this.setState({menuOpen:false})}>
 						<NavbarItem>Pricing</NavbarItem>
 					</Link>
-					<Link to="catelog">
+					<Link to="catelog" onClick={_ => this.setState({menuOpen:false})}>
 						<NavbarItem>Catelog</NavbarItem>
 					</Link>
-					<Link to="about">
+					<Link to="about" onClick={_ => this.setState({menuOpen:false})}>
 						<NavbarItem>About</NavbarItem>
 					</Link>
 				</NavbarWrapper>

@@ -11,6 +11,18 @@ import Shirt from '../assets/buttonup.jpg'
 
 let Wrapper = styled.section`
 	padding: 0 5px;
+	@media(min-width: 768px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	@media(min-width: 1025px) {
+		/* grid-template-columns: 1fr 1fr 1fr 1fr; */
+		a {
+			display: grid;
+			text-align: center;
+    		justify-content: center;
+		}
+	}
 `
 
 let CardContainer = styled.section`
@@ -18,11 +30,17 @@ let CardContainer = styled.section`
 	flex-direction: row;
 	border: 1px solid lightgray;
 	box-shadow: ${props => BOX_SHADOW.light};
-	padding: 5px;
-	margin: 5px 0;
+	margin: 5px;
+	@media(min-width: 1025px ) {
+		flex-direction: column;
+		width: 275px;
+	}
 
 	img {
 		max-height: 100px;
+		@media(min-width: 1025px) {
+			max-height: 170px;
+		}
 	}
 `
 export default class ItemCard extends Component {

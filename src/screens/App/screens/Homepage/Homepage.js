@@ -52,14 +52,24 @@ let SplashImg = styled.img`
 	/* background: url(${ Splash }) no-repeat;
 	background-size: contain; */
 `
-let SplashEmailWrapper = styled.section`
+let SplashContentWrapper = styled.section`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	@media(min-width: 1025px) {
-		/* flex-direction: row; */
+		img {
+			display: none;
+		}
 	}
 `
+let DesktopWrapper = styled.section`
+	@media(min-width: 1025px) {
+		img:last-of-type {
+			display: block;
+		}
+	}
+`
+
 
 
 export default class Homepage extends Component {
@@ -71,29 +81,32 @@ state = {
   render() {
 	return (
 	  <Wrapper>
-	  <p><iframe title="wangoframe" frameBorder="0" height="1000" id="bwiframe" src="https://www.visitahoustontexas.com/includes/plugins/nav/preview_civs/?type=nav_version&typeArgs[preview_type]=draft&typeArgs[version_id]=5cfeb5d724e6361040695f78&typeArgs[nav_id]=5cd9d9a96c3c81b80e414cb3" style={{zIndex:"999999"}} width="100%"></iframe>
-	  <script type="text/javascript" src="https://app.bandwango.com/js/checkout/embed.js"></script></p>
+	  {/* <p><iframe title="wangoframe" frameBorder="0" height="1000" id="bwiframe" src="https://www.visitahoustontexas.com/includes/plugins/nav/preview_civs/?type=nav_version&typeArgs[preview_type]=draft&typeArgs[version_id]=5cfeb5d724e6361040695f78&typeArgs[nav_id]=5cd9d9a96c3c81b80e414cb3" style={{zIndex:"999999"}} width="100%"></iframe> */}
+	  {/* <script type="text/javascript" src="https://app.bandwango.com/js/checkout/embed.js"></script></p> */}
 	  	<H1>Create and Customize your products</H1>
 		<H1subtext>Easy print-on-demand service, offering you the best bang for your buck</H1subtext>
-		<SplashEmailWrapper style={{display: "flex", justifyContent: "center"}}>
-			{/* <section > */}
-				<SplashImg src={ Splash }></SplashImg>
-				<ButtonWrapper>
-					<Link to="/catelog">
-						<Button style={ BUTTONS.primary }>Check out our Catelog</Button>
-					</Link>
-					<Link to="/order">
-						<Button style={ BUTTONS.secondary }>Order</Button>
-						<div style={{ fontSize: "13px", fontStyle: "italic" }}>Min order of 30</div>
-					</Link>
-				</ButtonWrapper>
+		<DesktopWrapper>
+			<SplashContentWrapper class="emailwrapp" style={{display: "flex", justifyContent: "center"}}>
+				{/* <section > */}
+					<SplashImg src={ Splash }></SplashImg>
+					<ButtonWrapper>
+						<Link to="/catelog">
+							<Button style={ BUTTONS.primary }>Check out our Catelog</Button>
+						</Link>
+						<Link to="/order">
+							<Button style={ BUTTONS.secondary }>Order</Button>
+						</Link>
+							<div style={{ fontSize: "13px", fontStyle: "italic" }}>Min order of 30</div>
+					</ButtonWrapper>
+			</SplashContentWrapper>
+				<SplashImg style={{display: "none"}} src={ Splash }></SplashImg>
+		</DesktopWrapper>
 			{/* </section> */}
 			<section>
 				<H1>Custom Clothing made for you</H1>
 				<TypeCard/>
 			</section>
 			<EmailForm/>
-		</SplashEmailWrapper>
 		<Router>
 			<Catelog path="/catelog"/>
 		</Router>

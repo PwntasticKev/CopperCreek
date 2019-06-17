@@ -41,13 +41,13 @@ let FormWrapper = styled.section`
 	}
 `
 
-let InputWrapper = styled.section`
-	display: flex;
-	flex-direction: row !important;
-	@media ( min-width: 1025px) {
-		flex-direction: column;
-	}
-`
+// let InputWrapper = styled.section`
+// 	display: flex;
+// 	flex-direction: row !important;
+// 	@media ( min-width: 1025px) {
+// 		flex-direction: column;
+// 	}
+// `
 
 export default class EmailForm extends Component {
 
